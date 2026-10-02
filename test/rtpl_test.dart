@@ -5,9 +5,22 @@ import 'package:test/test.dart';
 
 void main() {
   test('Renders test_invoice.rtpl with real dataset to HTML and PDF', () async {
-    final rtplFile = File('../test_invoice.rtpl');
-    expect(rtplFile.existsSync(), isTrue);
+    final possiblePaths = [
+      'test/fixtures/test_invoice.rtpl',
+      'fixtures/test_invoice.rtpl',
+      '../test_invoice.rtpl',
+      'test_invoice.rtpl',
+    ];
+    String? foundPath;
+    for (final p in possiblePaths) {
+      if (File(p).existsSync()) {
+        foundPath = p;
+        break;
+      }
+    }
 
+    expect(foundPath, isNotNull, reason: 'Could not find test_invoice.rtpl in test/fixtures');
+    final rtplFile = File(foundPath!);
     final rtplJson = await rtplFile.readAsString();
     final doc = loadTemplate(rtplJson);
     expect(doc.title, isNotEmpty);
