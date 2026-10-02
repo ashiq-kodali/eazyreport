@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="https://raw.githubusercontent.com/ashiq-kodali/eazyreport/main/assets/eazyreport_banner.png" alt="EazyReport - Pure Dart Reporting & Printing Engine for Flutter" width="100%">
+</p>
+
+<p align="center">
   <h1 align="center">⚡ EazyReport for Dart & Flutter</h1>
   <p align="center">
     <strong>Enterprise banded reporting and invoice printing engine written in 100% Pure Dart.</strong><br>
