@@ -19,7 +19,8 @@ void main() {
       }
     }
 
-    expect(foundPath, isNotNull, reason: 'Could not find test_invoice.rtpl in test/fixtures');
+    expect(foundPath, isNotNull,
+        reason: 'Could not find test_invoice.rtpl in test/fixtures');
     final rtplFile = File(foundPath!);
     final rtplJson = await rtplFile.readAsString();
     final doc = loadTemplate(rtplJson);
