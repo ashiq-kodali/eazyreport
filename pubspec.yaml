@@ -1,6 +1,6 @@
 name: eazyreport
-description: Banded document and invoice report printing and rendering engine in pure Dart. Render .rtpl templates with JSON data without JS or browser dependencies.
-version: 1.0.1
+description: Modern banded document and invoice reporting engine in pure Dart. Render .rtpl templates to printable HTML and vector PDF.
+version: 1.0.2
 homepage: https://eazyreport.in
 repository: https://github.com/ashiq-kodali/eazyreport
 issue_tracker: https://github.com/ashiq-kodali/eazyreport/issues

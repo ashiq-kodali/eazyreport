@@ -21,11 +21,22 @@
 
 ## 🚀 Overview
 
-**EazyReport** is a pure Dart reporting and document generation engine designed for Flutter apps and Dart backends. It loads visual report templates (`.rtpl` JSON) and binds them with your application data to produce publication-grade documents.
+**EazyReport** is a modern banded document and invoice generation engine designed for Flutter apps and Dart backends. It loads visual report templates (`.rtpl` JSON) and binds them with your application data to produce publication-grade documents.
 
-- **Zero JavaScript Dependencies**: No `flutter_js`, no `quickjs`, no Node.js, and no headless Chrome.
-- **Zero WebViews Required**: Direct binary vector PDF rendering in memory.
+- **Direct Vector PDF Rendering**: In-memory high-precision vector PDF generation (`Uint8List`).
+- **One-Line Flutter Printing**: Seamless printing integration via Flutter's `printing` package.
 - **Universal Multiplatform**: Runs on **Flutter** (iOS, Android, macOS, Windows, Linux, Web) and **Dart Server / CLI** (Docker, Cloud Functions, backend APIs).
+
+---
+
+## 💼 Real-World Use Cases
+
+| Use Case | Description | Highlights |
+| :--- | :--- | :--- |
+| 🧾 **1. Enterprise Commercial Invoicing** | B2B Commercial Invoices, Tax Invoices, Receipts, and Proforma Invoices. | Multi-currency billing with repeating line items, automatic tax & discount calculations, sum total aggregates, amount converted to English words (`numberToWords`), dynamic "PAID" status marks, and payment QR codes. |
+| 📦 **2. Logistics & Warehouse Manifests** | Packing Slips, Bills of Lading, Dispatch Slips, and Carrier Waybills. | Multi-page shipping manifests with Code 128 carrier tracking barcodes, DataMatrix bin-location tags, item verification checkboxes, and official dispatch watermarks. |
+| 📊 **3. Executive Sales & BI Dashboards** | Board Reviews, Monthly Financial Statements, P&L Summaries, and KPIs. | Executive reporting dashboards in landscape mode with Column & Doughnut charts, metric KPI highlight cards, and embedded tables with zebra-striping. |
+| 🎓 **4. Academic & Professional Certificates** | Degrees, Diplomas, Awards, Training Accreditations, and Event Passes. | Formal landscape certificates featuring serif typography (`Playfair Display`, `Merriweather`), dual-nested decorative frames, gold seal emblems, instructor signature lines, and online verification QR codes. |
 
 ---
 
@@ -39,18 +50,17 @@ Export the `.rtpl` file with one click, drop it into your Flutter `assets/` or s
 
 ---
 
-## 📊 Why EazyReport?
+## 📊 Features at a Glance
 
-| Feature | EazyReport | HTML-to-PDF / WebViews | Headless Chrome (Puppeteer) |
-| :--- | :---: | :---: | :---: |
-| **Pure Dart SDK** | ✅ **Yes (100%)** | ❌ Platform channels | ❌ Requires Node / Chromium |
-| **No Headless Browser / WebView** | ✅ **Zero runtime** | ❌ Heavy WebView | ❌ 300MB+ Chromium binary |
-| **Direct Flutter Printing** | ✅ **1 line code** | ⚠️ Slow canvas raster | ❌ Not available |
-| **Native Binary PDF (`Uint8List`)** | ✅ **Yes** | ⚠️ Inconsistent OS print | ⚠️ High memory footprint |
-| **Offline & Edge Compatible** | ✅ **Yes** | ⚠️ Fragile rendering | ❌ Server only |
-| **Banded Pagination & Groups** | ✅ **Built-in** | ❌ Manual CSS breaks | ❌ Manual CSS breaks |
-| **28+ Barcodes & 2D QR Codes** | ✅ **Built-in** | ❌ External JS libraries | ❌ External JS libraries |
-| **Vector SVG Charts** | ✅ **Built-in** | ❌ Heavy JS chart engines | ❌ Heavy JS chart engines |
+| Capability | EazyReport for Flutter & Dart |
+| :--- | :--- |
+| **Pure Dart SDK** | ✅ 100% native Dart code |
+| **Direct Flutter Printing** | ✅ 1-line integration with print dialogs |
+| **Native Binary PDF (`Uint8List`)** | ✅ Fast, vector-crisp, in-memory generation |
+| **Offline & Edge Ready** | ✅ Works completely offline on mobile & desktop |
+| **Banded Pagination & Groups** | ✅ Automatic two-pass pagination, headers, footers & child bands |
+| **28+ Barcodes & 2D QR Codes** | ✅ Vector SVG and PDF vector drawing |
+| **Vector SVG Charts** | ✅ Pure vector Column, Bar, Line, Area, Pie, Doughnut |
 
 ---
 
@@ -114,7 +124,7 @@ Add `eazyreport` to your project's `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  eazyreport: ^1.0.0
+  eazyreport: ^1.0.2
 ```
 
 Install via terminal:
@@ -265,9 +275,17 @@ flutter run
 
 ---
 
+## 👥 Contributors
+
+- **Ashiq Kodali** ([@ashiq-kodali](https://github.com/ashiq-kodali))
+- **Thameem PK**
+
+---
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 © Ashiq Kodali & EazyReport Contributors.
+
 

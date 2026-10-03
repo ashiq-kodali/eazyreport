@@ -1,3 +1,9 @@
+## 1.0.2
+
+- Updated documentation and README with real-world enterprise use cases matching [eazyreport.in](https://eazyreport.in/).
+- Added Contributors section recognizing Ashiq Kodali and Thameem PK.
+- Refined package descriptions and metadata.
+
 ## 1.0.1
 
 - Updated official repository and issue tracker links to `https://github.com/ashiq-kodali/eazyreport`.
